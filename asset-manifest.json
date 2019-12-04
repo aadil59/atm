@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/atm/static/css/main.aafcba21.chunk.css",
+    "main.js": "/atm/static/js/main.a39f053a.chunk.js",
+    "main.js.map": "/atm/static/js/main.a39f053a.chunk.js.map",
+    "runtime-main.js": "/atm/static/js/runtime-main.d0cabd2c.js",
+    "runtime-main.js.map": "/atm/static/js/runtime-main.d0cabd2c.js.map",
+    "static/js/2.a9ef9e7e.chunk.js": "/atm/static/js/2.a9ef9e7e.chunk.js",
+    "static/js/2.a9ef9e7e.chunk.js.map": "/atm/static/js/2.a9ef9e7e.chunk.js.map",
+    "index.html": "/atm/index.html",
+    "precache-manifest.8a7e552e5ac7c6dfd30c37772882bb0c.js": "/atm/precache-manifest.8a7e552e5ac7c6dfd30c37772882bb0c.js",
+    "service-worker.js": "/atm/service-worker.js",
+    "static/css/main.aafcba21.chunk.css.map": "/atm/static/css/main.aafcba21.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0cabd2c.js",
+    "static/js/2.a9ef9e7e.chunk.js",
+    "static/css/main.aafcba21.chunk.css",
+    "static/js/main.a39f053a.chunk.js"
+  ]
+}
