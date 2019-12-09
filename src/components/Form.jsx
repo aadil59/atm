@@ -15,13 +15,13 @@ export class form extends Component {
   // TO INPUT VALUE
   handleChange = e => {
     e.preventDefault();
-    this.setState({ amount: e.target.value });
+    const amount = e.target.validity.valid ? e.target.value : this.state.amount;
+    this.setState({ amount });
   };
   hanleClicked = e => {
     setTimeout(() => {
       this.setState({
-        noteCounter: this.countCurrency(parseInt(this.state.amount)),
-        amount: parseInt(this.state.amount)
+        noteCounter: this.countCurrency(this.state.amount)
       });
       // console.log(this.state.noteCounter);
       let currencYDataSet = {
@@ -38,19 +38,18 @@ export class form extends Component {
       };
       this.state.noteCounter.map((item, index) => {
         if (currencYDataSet.hasOwnProperty(item)) {
-          return currencYDataSet[item] += 1;
+          return (currencYDataSet[item] += 1);
         } else {
-          return currencYDataSet[item] = 1;
+          return (currencYDataSet[item] = 1);
         }
       });
       this.setState({
         counterObj: currencYDataSet
-      })
+      });
       // console.log(this.state.counterObj);
     }, 200);
   };
   countCurrency = amount => {
-
     let curr = [1, 2, 5, 10, 20, 50, 100, 200, 500, 2000];
     let i = curr.length - 1,
       withdraw = [];
@@ -76,7 +75,8 @@ export class form extends Component {
             <h3 className="text-center">Welcome to ATM</h3>
             <div className="form-group">
               <input
-                type="number"
+                type="text"
+                pattern="[0-9]*"
                 className={`form-control ${amount ? "float-label-up" : ""}`}
                 value={amount}
                 onChange={this.handleChange}
