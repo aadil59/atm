@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Info(props) {
     const { details } = props;
-    function sum( counterObj ) {
+    function sum() {
         var sum = 0;
         for( var el in details.counterObj ) {
           if( details.counterObj.hasOwnProperty( el ) ) {

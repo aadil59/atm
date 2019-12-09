@@ -8,7 +8,8 @@ export class form extends Component {
     this.hanleClicked = this.hanleClicked.bind(this);
     this.state = {
       amount: "",
-      counterObj: {}
+      counterObj: {},
+      noteCounter: {}
     };
   }
   // TO INPUT VALUE
@@ -19,7 +20,8 @@ export class form extends Component {
   hanleClicked = e => {
     setTimeout(() => {
       this.setState({
-        noteCounter: this.countCurrency(this.state.amount)
+        noteCounter: this.countCurrency(parseInt(this.state.amount)),
+        amount: parseInt(this.state.amount)
       });
       // console.log(this.state.noteCounter);
       let currencYDataSet = {
